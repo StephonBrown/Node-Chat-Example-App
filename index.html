@@ -34,6 +34,7 @@
     <script>
         var socket = io()
         $(()=>{
+            getMessages()
             $("#send").click(()=>{
                 var message = {name: $("#name").val(), message: $("#message").val()}
                 postMessages(message)
@@ -47,7 +48,7 @@
         }
         function getMessages(){
             $.get('http://localhost:3000/messages', (data)=>{
-                data.forEach(addMessages)
+                data.forEach(addMessage)
 
             })
         }
