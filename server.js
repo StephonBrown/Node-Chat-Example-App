@@ -5,7 +5,7 @@ var http = require('http').Server(app)
 var io = require('socket.io')(http)
 var mongoose = require('mongoose')
 
-var dbUrl = ''
+var dbUrl = 'mongodb://<Tate>:<Change123>@ds235768.mlab.com:35768/using-node'
 
 
 app.use(express.static(__dirname))
